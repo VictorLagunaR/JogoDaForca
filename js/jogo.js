@@ -107,10 +107,12 @@ function checarjogo(){
     const palavraCorreta = document.querySelector(".palavra-secreta")
     if(letrasErradas.length == 7){
         mensagemPerdeu.style.display = "block";
+        mensagemPerdeu.innerHTML = `fim de jogo, você Perdeu! A palavra era ${palavraSecreta}`
         fimDoJogo();
     }
     if(palavraSecreta == palavraCorreta.innerText){
         mensagemGanhou.style.display = "block";
+        mensagemGanhou.innerHTML = "Parabéns! Você ganhou!"
         fimDoJogo();
     }
     /*if(mensagem){
