@@ -1,9 +1,9 @@
 palavras = [
-    "java", "oracle" , "desafio", "tartaruga", "codificador", "sublime", "basquete"
+    "java", "oracle" , "desafio", "tartaruga", "codigo", "sublime", "basquete"
 ]
 
 function palavraAleatoria(){
-    palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)]
+    palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)].toUpperCase()
 }
 
 

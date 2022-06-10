@@ -21,7 +21,9 @@ function reconhecendoDigito(){
     const codigoTeclado = event.keyCode // O alfabeto começa no código 65 e vai até 90
         
         if (isLetra(codigoTeclado)){
-            const letra = event.key
+            const letra = event.key.toUpperCase()
+            console.log(letra)
+            console.log(codigoTeclado)
             titulo.style.display = "none"
             //letra faz parte da palavra?
             if (letrasErradas.includes(letra)) {
@@ -89,7 +91,12 @@ function novoJogo() {
 
 function desistir() {
 
-    location.reload()
+    secaoJogo.style.display = "none"
+    botoesInicio.style.display = "block"
+    fimDoJogo()
+    letrasErradas.splice(0, letrasErradas.length)
+    letrasCorretas.splice(0, letrasCorretas.length)
+
 }
 
 function checarjogo(){
