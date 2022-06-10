@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <span>
+            <a href="https://github.com/VictorLagunaR"><img src="img/logo.png" alt="Logo Alura"></a>
+        </span>
+    </header>
+
+        <section id="botoesInicio">
+            <button id="comecarJogo" class="botao-azul">Começar a jogar</button>
+            <button id="btnAdicionarPalavra" class="botao-transparente" >Adicionar nova palavra</button>
+        </section>
+
+        <section class="jogo">
+            <main>
+                <h1>Digite no teclado uma letra e tente adivinhar a palavra!</h1>
+                <div class="canvasMensagem">
+                    <canvas width="350px" height="300px"></canvas>
+                    <div class="mensagem">
+                        <h2 class="perdeu">fim de jogo! Você Perder!</h2>
+                        <h2 class="ganhou">Parabéns! Você ganhou!</h2>
+                    </div>
+                </div>
+                <div class="palavras">
+                    <div class="palavra-secreta"></div>
+                    <div class="letras-erradas"></div>
+                </div>
+            </main>
+            <div class="botoes">
+                <button id="novoJogo" class="botao-azul" onclick="novoJogo()">Novo Jogo</button>
+                <button id="desistir" class="botao-transparente" onclick="desistir()">Desistir</button>
+            </div>
+        </section>
+        <section id="adicionarPalavra">
+            <form method="get" id="form">
+                <textarea name="nova-palavra" id="nova-palavra" cols="30" rows="10" placeholder="Digite a nova palavra aqui" re></textarea>
+                <div id="importante">
+                    <ion-icon name="alert-circle-sharp"></ion-icon>
+                    <p>Máx. de 8 letras</p>
+                </div>
+                <div class="botoes">
+                    <button id="enviar-palavra" class="botao-azul">Salvar e enviar</button>
+                    <button id="cancelar" class="botao-transparente">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    
+
+    </div>
+    <footer>
+        <p>#oracleONE</p> 
+        <div class="github">
+            <a href="https://github.com/VictorLagunaR" target="_blank">
+                <p> Sigam-me no github!!</p>
+                <img src="img/logo-github.png" alt="Logo do Github">
+            </a>
+        </div>
+    </footer>
+
+        <!--Scripts para puxar ícones-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!--Scripts para funcionamento do site-->
+    <script src="js/jogo.js"></script>
+    <script src="js/adicionar-palavra.js"></script>
+        <!--Script para desenhar parte dos corpos e forca-->
+    <script src="js/partesCorpo.js"></script>
+        <!--Script para as palavras escondidas-->
+    <script src="js/palavras.js"></script>
+    
+</body>
+</html>

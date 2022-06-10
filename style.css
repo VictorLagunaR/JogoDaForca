@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --cor-fundo:#F3F5FC;
+    --cor-botaoCinza: #D8DFE8;
+    --cor-azulEscuro: #0A3871;
+    --cor-mensagem-ajuda:#495057;
+}
+
+body{
+    background:var(--cor-fundo);
+}
+
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+
+main{
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    width:510px;
+    margin: 20px auto;
+    position: relative;
+}
+.letras-erradas{
+    font-size:30px;
+    color: var(--cor-azulEscuro);
+}
+
+footer{
+    width:160px;
+    margin: 0 auto;
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+
+a{
+    color: black;
+}
+
+div.github img{
+    width:30px;
+    margin-right: 5px;
+}
+header{
+    margin:10px 0;
+}
+#logo{
+    height:50px;
+    width: 50px;
+}
+
+h1{
+    font-size: 19px;
+    margin-bottom: 20px;
+    color:var(--cor-azulEscuro)
+}
+
+form{
+    width: 530px;
+    margin: 0 auto;
+}
+textarea{
+    width:500px;
+    height:300px;
+    margin-bottom: 20px;
+    resize:none;
+    border:none;
+    font-size: 24px;
+    background: transparent;
+    color: var(--cor-azulEscuro);
+}
+
+textarea:focus{
+    outline: 0;
+}
+
+/*Estilização dos botões*/
+    button{
+        border-radius:20px;
+        height:50px;
+        width:260px;
+        font-size: 16px;
+        border:none;
+        cursor: pointer;
+    }
+
+    #botoesInicio{
+        display: block;
+        width:270px;
+        height:120px;
+        margin: 100px auto;
+    }
+    #comecarJogo, #btnAdicionarPalavra{
+        height:80px;
+        display: block;
+    }
+
+    .botao-azul{
+        background: var(--cor-azulEscuro);
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .botao-transparente{
+        background-color: transparent;
+        border: 1px solid var(--cor-azulEscuro);
+        color: var(--cor-azulEscuro);
+        font-weight: 500;
+    }
+    .botoes{
+        width:530px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    #importante{
+        display:flex;
+        gap:10px;
+        align-items: center;
+        color: var(--cor-mensagem-ajuda);
+        margin-bottom:20px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+    }
+    
+    #importante ion-icon{
+        font-size:20px;
+    }
+
+.palavra-secreta{
+    color: var(--cor-azulEscuro);
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-align: center;
+}
+.letras-erradas{
+    color: rgb(148, 147, 147);
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.palavras{
+    margin-bottom: 5px;
+}
+
+.perdeu, .ganhou{
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-left:15px;
+    display: none;
+}
+
+.perdeu{
+    color: red;
+}
+
+.ganhou{
+    color: green;
+}
+
+.canvasMensagem{
+    display: flex;
+}
+
+canvas{
+    margin-bottom:20px;
+    float: left;
+}
+
+/*Escondendo as seções*/
+section{
+    display: none;
+}
+
