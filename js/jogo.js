@@ -19,10 +19,10 @@ function iniciarJogo() {
 
 function reconhecendoDigito(){
     const codigoTeclado = event.keyCode // O alfabeto começa no código 65 e vai até 90
-        titulo.style.display = "none"
+        
         if (isLetra(codigoTeclado)){
             const letra = event.key
-            console.log(event.keyCode)
+            titulo.style.display = "none"
             //letra faz parte da palavra?
             if (letrasErradas.includes(letra)) {
                 letraRepetida()            
@@ -95,6 +95,8 @@ function desistir() {
 function checarjogo(){
     let mensagemPerdeu = document.querySelector(".perdeu")
     let mensagemGanhou = document.querySelector(".ganhou")
+    mensagemPerdeu.style.display = "none";
+    mensagemGanhou.style.display = "none";
     const palavraCorreta = document.querySelector(".palavra-secreta")
     if(letrasErradas.length == 7){
         mensagemPerdeu.style.display = "block";
