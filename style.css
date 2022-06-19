@@ -253,5 +253,9 @@ section{
     textarea{
         width:370px;
     }
+    
+    footer{
+        margin-top:15px;
+    }
 
 }
